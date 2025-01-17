@@ -1,6 +1,9 @@
-// Dynamically set the copyright year
-const currentYear = new Date().getFullYear();
-document.getElementById('currentyear').textContent = currentYear;
+document.addEventListener('DOMContentLoaded', function () {
+    // Set the current year dynamically
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = currentYear;
 
-// Dynamically set the last modified date
-document.getElementById('lastModified').textContent += document.lastModified;
+    // Set the last modified date dynamically
+    const lastModified = document.lastModified;
+    document.getElementById('lastModified').textContent = `Last Modification: ${lastModified}`;
+});
