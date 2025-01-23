@@ -86,7 +86,7 @@ header {
     margin-left: 0.5rem;
     width: 24px;
     height: 24px;
-    background: url('../images/weather-icon.svg') no-repeat center center;
+    background: url('../images/sun_cloud_icon.svg') no-repeat center center;
     background-size: contain;
 }
 
