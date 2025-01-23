@@ -1,0 +1,124 @@
+
+:root {
+    --primary-color: #e30613; 
+    --secondary-color: #006633; 
+    --text-color: #333333;
+    --background-overlay: rgba(255, 255, 255, 0.9);
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #fff;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Data Overlay */
+.data-overlay,
+.weather-overlay {
+    position: absolute;
+    top: 20%;
+    background: var(--background-overlay);
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.data-overlay {
+    left: 5%;
+    top: 5%;
+}
+
+.weather-overlay {
+    right: 5%;
+    bottom: 10%;
+    top: 50%;
+}
+
+.data-overlay h2,
+.weather-overlay h2 {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 0.5rem;
+    margin: -1rem -1rem 0.5rem -1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.data-overlay ul,
+.weather-overlay ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.data-overlay li,
+.weather-overlay li {
+    margin: 0.5rem 0;
+}
+
+.weather-overlay .icon {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
+    background: url('../images/weather-icon.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.weather-overlay::after {
+    content: "😊";
+    display: block;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    visibility: visible;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .data-overlay,
+    .weather-overlay {
+        position: static;
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .hero {
+        height: auto;
+    }
+}

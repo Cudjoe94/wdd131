@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WDD 131 - Country / Place Page - Francis Uba Ezieme</title>
+    <meta name="description" content="A Country / Place Page showing info about a country created by Francis Uba Ezieme">
+    <meta name="author" content="Francis Uba Ezieme">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Madagascar</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero1.webp" media="(min-width: 768px)">
+                <source srcset="images/hero2.webp" media="(max-width: 767px)">
+                <img src="images/hero2.webp" alt="hero2">
+            </picture>
+            <!-- Data Section Overlay -->
+            <div class="data-overlay">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 587,041 sq km</li>
+                    <li><strong>Population:</strong> 27,691,018</li>
+                    <li><strong>Capital:</strong> Antananarivo</li>
+                    <li><strong>Languages:</strong> Malagasy, French</li>
+                    <li><strong>Currency:</strong> Malagasy Ariary</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +261</li>
+                    <li><strong>Internet TLD:</strong> .mg</li>
+                </ul>
+            </div>
+
+            <!-- Weather Section Overlay -->
+            <div class="weather-overlay">
+                <h2>Weather <span class="icon">🌤️</span></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> 10°C</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> 5 km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windChill">9.8°C</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;2024 Francis Uba Ezieme, Abia State, Nigeria.</p>
+        <p><span id="currentYear"></span>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
