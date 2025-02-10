@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album - Francis Uba Ezieme</title>
+    <meta name="description" content="A dynamically generated and filterable temple album - Created by Francis Uba Ezieme">
+    <meta name="author" content="Francis Uba Ezieme">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script defer src="scripts/filtered-temples.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="menu" aria-label="Toggle Navigation Menu">"&#9776;</button>
+        <h1>Filtered Temple Album</h1>
+        <nav>
+            <ul id="nav-menu">
+                <li><button class="filter" data-filter="home">Home</button></li>
+                <li><button class="filter" data-filter="old">Old</button></li>
+                <li><button class="filter" data-filter="new">New</button></li>
+                <li><button class="filter" data-filter="large">Large</button></li>
+                <li><button class="filter" data-filter="small">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Temple Gallery</h2>
+            <div id="temple-container" class="container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Francis Uba Ezieme, Abia State, Nigeria.</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
