@@ -29,14 +29,16 @@ nav ul {
     margin: 0;
 }
 
-nav a {
-    text-decoration: none;
+nav button {
+    background: none;
+    border: none;
     color: white;
     font-weight: bold;
+    cursor: pointer;
     transition: color 0.3s;
 }
 
-nav a:hover {
+nav button:hover {
     color: #ffd700;
     text-decoration: underline;
 }
@@ -61,8 +63,9 @@ nav a:hover {
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
-    loading: lazy;
 }
+
+/* Removed `loading: lazy;` because it is not a valid CSS property */
 
 .temple-card img:hover {
     transform: scale(1.05);
