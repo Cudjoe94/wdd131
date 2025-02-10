@@ -25,18 +25,18 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
-nav button {
-    background: none;
-    border: none;
+nav a {
+    text-decoration: none;
     color: white;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
-nav button:hover {
+nav a:hover {
     color: #ffd700;
     text-decoration: underline;
 }
