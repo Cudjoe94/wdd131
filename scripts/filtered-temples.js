@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastModifiedSpan = document.getElementById("last-modified");
     const menuButton = document.getElementById("menu");
     const navMenu = document.getElementById("nav-menu");
-    const filterButtons = document.querySelectorAll(".filter");
+    const filterLinks = document.querySelectorAll(".filter");
     const templeContainer = document.getElementById("temple-container");
 
     // Set current year
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-    
+
     // Set last modified date
     if (lastModifiedSpan) {
         lastModifiedSpan.textContent = document.lastModified;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!templeContainer) return;
         templeContainer.innerHTML = "";
         let filteredTemples = temples;
-        
+
         if (filter === "old") {
             filteredTemples = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
         } else if (filter === "new") {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (filter === "small") {
             filteredTemples = temples.filter(t => t.area < 10000);
         }
-        
+
         filteredTemples.forEach(temple => {
             const templeCard = document.createElement("div");
             templeCard.classList.add("temple-card");
@@ -79,9 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Event listeners for filters
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            displayTemples(button.dataset.filter);
+    filterLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent page jump
+            displayTemples(event.target.dataset.filter);
         });
     });
 
